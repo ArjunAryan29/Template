@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="40.693" tests="3" skipped="0" failures="1" errors="0">
+<testcase classname="Login Validation" name="Perform successful login" time="14.874">
+<system-out><![CDATA[
+Given I enter the URL using <"edge">........................................passed
+When I enter the username and password and click on login...................passed
+Then I am successfully logged in............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Validation" name="CRN numbers and availability in bloodbank - Example #1.1" time="11.844">
+<system-out><![CDATA[
+Given I enter the URL using <"edge">........................................passed
+When I enter the username and password and click on login...................passed
+And I enter the "999367" number in homepage.................................passed
+And click on Blood bank button..............................................passed
+Then Check the Blood bank details are available for the entered crn number..passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Validation" name="CRN numbers and availability in bloodbank - Example #1.2" time="13.596">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='accH_reportRowId1f473d3a-9885-4013-b900-497ecc515149']/button&quot;}
+  (Session info: MicrosoftEdge=127.0.2651.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [90676bbed14f100ee8f5cc4ee34a7157, findElement {using=xpath, value=//*[@id='accH_reportRowId1f473d3a-9885-4013-b900-497ecc515149']/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 127.0.2651.105, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50259}, msedge: {msedgedriverVersion: 127.0.2651.105 (e2354f41f84..., userDataDir: C:\Users\ar264619\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50259/devtoo..., se:cdpVersion: 127.0.2651.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 90676bbed14f100ee8f5cc4ee34a7157">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='accH_reportRowId1f473d3a-9885-4013-b900-497ecc515149']/button"}
+  (Session info: MicrosoftEdge=127.0.2651.105)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [90676bbed14f100ee8f5cc4ee34a7157, findElement {using=xpath, value=//*[@id='accH_reportRowId1f473d3a-9885-4013-b900-497ecc515149']/button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 127.0.2651.105, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50259}, msedge: {msedgedriverVersion: 127.0.2651.105 (e2354f41f84..., userDataDir: C:\Users\ar264619\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50259/devtoo..., se:cdpVersion: 127.0.2651.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 90676bbed14f100ee8f5cc4ee34a7157
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at utility.BrowserDriver.clickByXpath(BrowserDriver.java:48)
+	at pages.BB_Details.BB_Details_Validation(BB_Details.java:14)
+	at StepDefinition.BBSteps.CheckBBDetails(BBSteps.java:21)
+	at ✽.Check the Blood bank details are available for the entered crn number(file:///C:/Users/ar264619/Downloads/Final-main/CWS%20Pipeline/src/test/java/features/CWSLogin.feature:15)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I enter the URL using <"edge">........................................passed
+When I enter the username and password and click on login...................passed
+And I enter the "999368" number in homepage.................................passed
+And click on Blood bank button..............................................passed
+Then Check the Blood bank details are available for the entered crn number..failed
+]]></system-out>
+</testcase>
+</testsuite>
